@@ -1,0 +1,286 @@
+:root {
+    --soft-red: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+
+    --dark-desaturated-cyan: hsl(167, 40%, 24%); /* graphic design text */
+    --dark-blue: hsl(198, 62%, 26%); /* photography text */
+    --dark-moderate-cyan: hsl(168, 34%, 41%); /* footer */
+    --bg-footer: #90D4C5; /* footer */
+
+    --bg-section: #FFFBF8;
+
+    --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --dark-grayish-blue: hsl(232, 10%, 55%);
+    --grayish-blue: hsl(210, 4%, 67%);
+    --white: hsl(0, 0%, 100%);
+
+    --font-size: 1.125rem;
+    --spacing: 1.5em;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+h1 {
+    line-height: 1;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    font-size: var(--font-size);
+    color: var(--very-dark-desaturated-blue);
+    line-height: 1.6;
+    height: 100%;
+}
+
+img {
+    display: block;
+    max-width: 100%
+}
+
+/********** HEADER **********/
+
+.container {
+    margin: 0 auto;
+}
+
+header {
+    padding: var(--spacing);
+    background-image: url("images/mobile/image-header.jpg");
+    background-position: center -300px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+header .nav {
+    display: flex;
+    margin-bottom: 5em;
+}
+
+header .toggle {
+    margin-left: auto;
+}
+
+header .toggle:hover {
+    cursor: pointer;
+}
+
+header ul {
+    display: flex;
+    gap: var(--spacing);
+    justify-content: space-around;
+}
+
+header h1 {
+    text-align: center;
+    letter-spacing: 0.25em;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: 'Fraunces', serif;
+    color: var(--white);
+    margin-bottom: 10em;
+}
+
+header .arrow {
+    position: absolute;
+    left: calc(50% - 56px / 2);
+    height: 180px;
+    top: 45%;
+    bottom: 0;
+    right: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--white);
+    display: none;
+}
+
+/********** TRANSFORM & STAND OUT **********/
+
+.transform,
+.stand-out {
+    background: var(--bg-section);
+}
+
+.transform div,
+.stand-out div {
+    padding: var(--spacing) 4em;
+    text-align: center;
+}
+
+.transform h1,
+.stand-out h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: var(--spacing);
+}
+
+.transform p,
+.stand-out p {
+    color: var(--dark-grayish-blue);
+    margin-bottom: var(--spacing);
+}
+
+.transform a,
+.stand-out a {
+    display: inline-block;
+    font-family: 'Fraunces', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--very-dark-desaturated-blue);
+    margin-bottom: var(--spacing);
+    position: relative;
+    z-index: 1;
+}
+
+.transform a::after,
+.stand-out a::after {
+    content: '';
+    position: absolute;
+    background: var(--yellow);
+    opacity: 0.2;
+    top: 60%;
+    border-radius: 5px;
+    right: -0.5em;
+    bottom: 2px;
+    left: -0.5em;
+    z-index: -1;
+}
+
+.stand-out a::after {
+    background: var(--soft-red);
+}
+
+/********** GRAPHIC DESIGN & PHOTOGRAPHY **********/
+
+.graphic-design,
+.photography {
+    background-image: url("images/mobile/image-graphic-design.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100%;
+    padding: var(--spacing) 4em;
+    text-align: center;
+    color: var(--dark-desaturated-cyan);
+}
+
+.graphic-design h1,
+.photography h1 {
+    font-size: 2.5rem;
+    font-family: 'Fraunces', serif;
+    margin-top: 12em;
+    margin-bottom: var(--spacing);
+}
+
+.graphic-design p,
+.photography p {
+    margin-bottom: var(--spacing);
+}
+
+.photography {
+    background-image: url("images/mobile/image-photography.jpg");
+    color: var(--dark-blue);
+    margin-bottom: var(--spacing);
+}
+
+/********** TESTIMONIALS **********/
+
+.testimonials {
+    padding: var(--spacing);
+    background: var(--bg-section);
+    text-align: center;
+    margin-bottom: var(--spacing);
+}
+
+.testimonials ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+}
+
+.testimonials h1 {
+    letter-spacing: 0.2em;
+    color: var(--grayish-blue);
+    font-size: 1.5rem;
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing);
+}
+
+.testimonials img {
+    width: 80px;
+    border-radius: 50%;
+    margin: 0 auto var(--spacing) auto;
+}
+
+.testimonials .comment {
+    color: var(--dark-grayish-blue);
+    padding: 0 4em;
+    margin-bottom: var(--spacing);
+}
+
+.testimonials .name {
+    font-family: 'Fraunces', serif;
+    color: var(--very-dark-desaturated-blue);
+}
+
+.testimonials .profession {
+    color: var(--grayish-blue);
+    font-size: 0.8rem;
+    margin-bottom: var(--spacing);
+}
+
+/********** PRE FOOTER **********/
+
+.pre-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+/********** FOOTER **********/
+
+footer {
+    padding: var(--spacing);
+    background-color: var(--bg-footer);
+    display: flex;
+    flex-direction: column;
+}
+
+footer .logo {
+    margin: var(--spacing) auto;
+    width: 200px;
+}
+
+footer ul {
+    margin: 2em auto;
+    display: flex;
+    gap: var(--spacing);
+}
+
+footer ul.nav {
+    gap: 3em;
+}
+
+footer a {
+    color: var(--dark-moderate-cyan);
+    text-decoration: none;
+}
+
+
+@media (min-width: 550px) {
+    body {
+        display: none;
+    }
+}
